@@ -1,0 +1,5 @@
+#exclude everything
+*
+# except dist and pkg file
+!dist
+!package.json
