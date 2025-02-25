@@ -1,5 +1,6 @@
-#exclude everything
-*
-# except dist and pkg file
-!dist
-!package.json
+node_modules
+src
+package*
+tsconfig.json
+.storybook
+README.md
