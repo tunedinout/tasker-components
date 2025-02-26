@@ -1,5 +1,4 @@
 import React from 'react';
-import './Button.css'
 
 // Define the button's prop types:
 type ButtonProps = {

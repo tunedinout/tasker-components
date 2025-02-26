@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "dependencies": {
     "@types/react": "^19.0.10",
     "react": "^19.0.0"
   },
   "scripts": {
-    "build": "tsc && npx babel src/components --out-dir dist --extensions '.ts,.tsx'",
+    "build": "tsc && npx babel src/components --out-dir dist/components --extensions '.ts,.tsx'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "npm run build"
