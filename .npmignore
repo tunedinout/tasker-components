@@ -1,9 +1,6 @@
-node_modules
-README.md
+/node_modules
 src
-test
-# Exclude everything by default
-*
-# Include only the dist folder and package.json
-!dist
-!package.json
+package*
+tsconfig.json
+.storybook
+README.md
