@@ -5,7 +5,7 @@
     "jsx": "react",
     "outDir": "./dist/components",
     "declaration": true,
-    "declarationDir": "./dist/types",
+    "declarationDir": "./dist/types/components",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

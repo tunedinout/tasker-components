@@ -2,8 +2,8 @@
   "name": "tasker-components",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/components/index.js",
+  "types": "dist/types/components/index.d.ts",
   "dependencies": {
     "@types/react": "^19.0.10",
     "react": "^19.0.0"
