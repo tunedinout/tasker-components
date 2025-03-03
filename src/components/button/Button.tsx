@@ -15,23 +15,22 @@ type ButtonProps = {
 
 // Styled components for different button variants
 const StyledButton = styled.button<{ variant: 'primary' | 'secondary' | 'default' }>`
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  border-radius: 6px;
   transition: background-color 0.3s;
-  border: ${(props) =>
-    props.variant === 'default' ? '1px solid #ccc' : 'none'};
-  background-color: ${(props) =>
-    props.variant === 'primary'
-      ? '#007bff'
-      : props.variant === 'secondary'
-      ? '#6c757d'
-      : '#fff'};
+  border: none;
+  background-color: ${(props) =>props.theme.colors[props.variant]}
   color: ${(props) =>
-    props.variant === 'default' ? '#000' : '#fff'};
+    props.theme.colors.text};
   &:hover {
     opacity: 0.8;
+  }
+  &:disabled {
+    background-color: ${props => props.theme.colors.accent}
+    cursor: not-allowed;
+    opacity: 0.6;
   }
 `;
 
