@@ -9,11 +9,13 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "types": ["react", "node"],
+    "types": ["react", "react-dom"],
+    "lib": ["dom", "ES2015", "ES2016", "ES2017"],
     "moduleResolution": "node"
   },
   "include": [
-    "src/components"
+    "src/components",
+    "src/types"
   ],
   "exclude": ["node_modules", "src/stories/*"]
 }
