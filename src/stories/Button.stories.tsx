@@ -50,8 +50,26 @@ export const Primary: Story = {
   };
   
   // 6. A “Disabled” story
-  export const Disabled: Story = {
+  export const DisabledDefault: Story = {
     args: {
+      label: 'I am disabled',
+      disabled: true,
+      onClick: () => alert('Should not fire!'),
+    },
+  };
+
+  export const DisabledPrimary: Story = {
+    args: {
+      variant: 'primary',
+      label: 'I am disabled',
+      disabled: true,
+      onClick: () => alert('Should not fire!'),
+    },
+  };
+
+  export const DisabledSecondary: Story = {
+    args: {
+      variant: 'secondary',
       label: 'I am disabled',
       disabled: true,
       onClick: () => alert('Should not fire!'),
