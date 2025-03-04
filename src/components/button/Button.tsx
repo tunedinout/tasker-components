@@ -16,21 +16,23 @@ type ButtonProps = {
 // Styled components for different button variants
 const StyledButton = styled.button<{ variant: 'primary' | 'secondary' | 'default' }>`
   padding: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 400;
+  letter-spacing: ${props => props.theme.letterSpacing.text};
+  font-size:${props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.fontFamily};
+  font-weight: ${props => props.theme.fontWeight[props.theme.mode].regular};
   border-radius: 6px;
   transition: background-color 0.3s;
   border: none;
-  background-color: ${(props) =>props.theme.colors[props.variant]}
+  background-color: ${(props) => props.theme.colors[props.variant][props.theme.mode]};
   color: ${(props) =>
-    props.theme.colors.text};
+    props.theme.colors.text[props.theme.mode]};
   &:hover {
     opacity: 0.8;
   }
   &:disabled {
-    background-color: ${props => props.theme.colors.accent}
+    background-color: ${props => props.theme.colors[props.variant]};
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: 0.8;
   }
 `;
 
