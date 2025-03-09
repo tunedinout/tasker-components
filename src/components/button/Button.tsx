@@ -1,20 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+type ButtonVariants = 'primary' | 'secondary' | 'default'| 'success' | 'danger' | 'warning';
 
-// Define the button's prop types:
 type ButtonProps = {
-  /** The text to display on the button */
-  label: string;
-  /** Callback fired when the button is clicked */
+  label?: string;
   onClick: () => void;
-  /** Visual style variant */
-  variant?: 'primary' | 'secondary' | 'default';
-  /** Whether the button is disabled */
+  variant?: ButtonVariants;
   disabled?: boolean;
+  children: React.ReactNode;
 };
 
-// Styled components for different button variants
-const StyledButton = styled.button<{ variant: 'primary' | 'secondary' | 'default' }>`
+const StyledButton = styled.button<{ variant: ButtonVariants }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem;
   letter-spacing: ${props => props.theme.letterSpacing.text};
   font-size:${props => props.theme.fontSize.small};
@@ -41,10 +40,12 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   variant = 'default',
   disabled = false,
+  children,
 }) => {
   return (
     <StyledButton onClick={onClick} variant={variant} disabled={disabled}>
-      {label}
+      {label && <div>{label}</div>}
+      {children}
     </StyledButton>
   );
 };
