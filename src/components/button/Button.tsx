@@ -8,7 +8,7 @@ type ButtonProps = {
   onClick: () => void;
   variant?: ButtonVariants;
   disabled?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 const StyledButton = styled.button<{ variant: ButtonVariants }>`
