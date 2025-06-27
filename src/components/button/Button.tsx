@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { DefaultTheme } from 'themes';
 type ButtonVariants = 'primary' | 'secondary' | 'default'| 'success' | 'danger' | 'warning';
 
 type ButtonProps = {
@@ -34,6 +35,9 @@ const StyledButton = styled.button<{ variant: ButtonVariants }>`
     opacity: 0.8;
   }
 `;
+StyledButton.defaultProps = {
+  theme: DefaultTheme
+}
 
 const Button: React.FC<ButtonProps> = ({
   label,

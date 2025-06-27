@@ -11,7 +11,11 @@
     "strict": true,
     "types": ["react", "react-dom"],
     "lib": ["dom", "ES2015", "ES2016", "ES2017"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "themes": ["themes/index.ts"]
+    }
   },
   "include": [
     "src/components",
