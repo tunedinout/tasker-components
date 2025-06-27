@@ -5,7 +5,7 @@
     "jsx": "react",
     "outDir": "./dist",
     "declaration": true,
-    "declarationDir": "./dist/types/components",
+    "declarationDir": "./dist",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -20,7 +20,8 @@
   "include": [
     "src/components",
     "src/types",
-    "src/themes"
+    "src/themes",
+    "src/index.ts",
   ],
   "exclude": ["node_modules", "src/stories/*"]
 }
