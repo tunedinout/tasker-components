@@ -16,7 +16,7 @@
   "include": [
     "src/components",
     "src/types",
-    "srch/themes"
+    "src/themes"
   ],
   "exclude": ["node_modules", "src/stories/*"]
 }
