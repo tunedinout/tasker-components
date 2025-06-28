@@ -13,7 +13,7 @@
     "styled-components": "^6.1.15"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.build.json && tsc-alias && npx babel src/index.ts --out-dir dist --extensions '.ts,.tsx'",
+    "build": "tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json && npx babel src/index.ts --out-dir dist --extensions '.ts,.tsx'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "npm run build"
