@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "paths": {
-      "themes": ["themes/index.ts"]
+      "themes": ["themes"]
     }
   },
   "include": [
